@@ -127,7 +127,8 @@
 
 .footer__copyright {
     font-size: 0.8rem;
-    color: #666666;
+    color: #a0a0a0;
+    /* Improved contrast (was #666666) */
     font-weight: 500;
 }
 
@@ -143,7 +144,8 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 50px;
     transition: all 0.2s ease;
-    color: #777777 !important;
+    color: #b0b0b0 !important;
+    /* Improved contrast (was #777777) */
     text-decoration: none;
     text-transform: uppercase;
 }

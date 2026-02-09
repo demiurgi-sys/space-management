@@ -591,9 +591,10 @@ img {
 .section-header__badge {
     display: inline-block;
     padding: 8px 20px;
-    /* Increased by ~25% */
-    background: rgba(163, 0, 0, 0.1);
-    color: var(--color-primary);
+    background: rgba(217, 68, 68, 0.15);
+    /* More saturated background */
+    color: #e63946;
+    /* Stronger contrast color */
     border-radius: var(--radius-full);
     font-size: 1rem;
     /* Increased by ~25% (was 0.8125rem) */
