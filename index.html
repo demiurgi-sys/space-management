@@ -11,6 +11,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet">
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
@@ -34,7 +38,7 @@
                 <span class="hero__motto-accent">дизайнерами стають!</span>
             </p>
 
-            <h1 class="hero__title">
+            <h1 class="hero__title" fetchpriority="high">
                 Мистецтво<br>
                 <span class="hero__title-focus">управління</span><br>
                 простором
@@ -243,30 +247,72 @@
 
                 <div class="curriculum__track-wrapper">
                     <div class="curriculum__track" id="curriculum-track">
-                        <!-- Слайди будуть додані динамічно або вручну -->
-                        <!-- Slides with PNG images -->
-                        <div class="curriculum__slide"><img src="assets/images/1.webp" alt="Програма ст. 1"
-                                loading="lazy"></div>
-                        <div class="curriculum__slide"><img src="assets/images/2.webp" alt="Програма ст. 2"
-                                loading="lazy"></div>
-                        <div class="curriculum__slide"><img src="assets/images/3.webp" alt="Програма ст. 3"
-                                loading="lazy"></div>
-                        <div class="curriculum__slide"><img src="assets/images/4.webp" alt="Програма ст. 4"
-                                loading="lazy"></div>
-                        <div class="curriculum__slide"><img src="assets/images/5.webp" alt="Програма ст. 5"
-                                loading="lazy"></div>
-                        <div class="curriculum__slide"><img src="assets/images/6.webp" alt="Програма ст. 6"
-                                loading="lazy"></div>
-                        <div class="curriculum__slide"><img src="assets/images/7.webp" alt="Програма ст. 7"
-                                loading="lazy"></div>
-                        <div class="curriculum__slide"><img src="assets/images/8.webp" alt="Програма ст. 8"
-                                loading="lazy"></div>
-                        <div class="curriculum__slide"><img src="assets/images/9.webp" alt="Програма ст. 9"
-                                loading="lazy"></div>
-                        <div class="curriculum__slide"><img src="assets/images/10.webp" alt="Програма ст. 10"
-                                loading="lazy"></div>
-                        <div class="curriculum__slide"><img src="assets/images/11.webp" alt="Програма ст. 11"
-                                loading="lazy"></div>
+                        <div class="curriculum__slide">
+                            <img src="assets/images/1-720.webp"
+                                srcset="assets/images/1-360.webp 360w, assets/images/1-720.webp 720w, assets/images/1-1080.webp 1080w"
+                                sizes="(max-width: 480px) 360px, (max-width: 900px) 720px, 1080px" alt="Програма ст. 1"
+                                loading="lazy">
+                        </div>
+                        <div class="curriculum__slide">
+                            <img src="assets/images/2-720.webp"
+                                srcset="assets/images/2-360.webp 360w, assets/images/2-720.webp 720w, assets/images/2-1080.webp 1080w"
+                                sizes="(max-width: 480px) 360px, (max-width: 900px) 720px, 1080px" alt="Програма ст. 2"
+                                loading="lazy">
+                        </div>
+                        <div class="curriculum__slide">
+                            <img src="assets/images/3-720.webp"
+                                srcset="assets/images/3-360.webp 360w, assets/images/3-720.webp 720w, assets/images/3-1080.webp 1080w"
+                                sizes="(max-width: 480px) 360px, (max-width: 900px) 720px, 1080px" alt="Програма ст. 3"
+                                loading="lazy">
+                        </div>
+                        <div class="curriculum__slide">
+                            <img src="assets/images/4-720.webp"
+                                srcset="assets/images/4-360.webp 360w, assets/images/4-720.webp 720w, assets/images/4-1080.webp 1080w"
+                                sizes="(max-width: 480px) 360px, (max-width: 900px) 720px, 1080px" alt="Програма ст. 4"
+                                loading="lazy">
+                        </div>
+                        <div class="curriculum__slide">
+                            <img src="assets/images/5-720.webp"
+                                srcset="assets/images/5-360.webp 360w, assets/images/5-720.webp 720w, assets/images/5-1080.webp 1080w"
+                                sizes="(max-width: 480px) 360px, (max-width: 900px) 720px, 1080px" alt="Програма ст. 5"
+                                loading="lazy">
+                        </div>
+                        <div class="curriculum__slide">
+                            <img src="assets/images/6-720.webp"
+                                srcset="assets/images/6-360.webp 360w, assets/images/6-720.webp 720w, assets/images/6-1080.webp 1080w"
+                                sizes="(max-width: 480px) 360px, (max-width: 900px) 720px, 1080px" alt="Програма ст. 6"
+                                loading="lazy">
+                        </div>
+                        <div class="curriculum__slide">
+                            <img src="assets/images/7-720.webp"
+                                srcset="assets/images/7-360.webp 360w, assets/images/7-720.webp 720w, assets/images/7-1080.webp 1080w"
+                                sizes="(max-width: 480px) 360px, (max-width: 900px) 720px, 1080px" alt="Програма ст. 7"
+                                loading="lazy">
+                        </div>
+                        <div class="curriculum__slide">
+                            <img src="assets/images/8-720.webp"
+                                srcset="assets/images/8-360.webp 360w, assets/images/8-720.webp 720w, assets/images/8-1080.webp 1080w"
+                                sizes="(max-width: 480px) 360px, (max-width: 900px) 720px, 1080px" alt="Програма ст. 8"
+                                loading="lazy">
+                        </div>
+                        <div class="curriculum__slide">
+                            <img src="assets/images/9-720.webp"
+                                srcset="assets/images/9-360.webp 360w, assets/images/9-720.webp 720w, assets/images/9-1080.webp 1080w"
+                                sizes="(max-width: 480px) 360px, (max-width: 900px) 720px, 1080px" alt="Програма ст. 9"
+                                loading="lazy">
+                        </div>
+                        <div class="curriculum__slide">
+                            <img src="assets/images/10-720.webp"
+                                srcset="assets/images/10-360.webp 360w, assets/images/10-720.webp 720w, assets/images/10-1080.webp 1080w"
+                                sizes="(max-width: 480px) 360px, (max-width: 900px) 720px, 1080px" alt="Програма ст. 10"
+                                loading="lazy">
+                        </div>
+                        <div class="curriculum__slide">
+                            <img src="assets/images/11-720.webp"
+                                srcset="assets/images/11-360.webp 360w, assets/images/11-720.webp 720w, assets/images/11-1080.webp 1080w"
+                                sizes="(max-width: 480px) 360px, (max-width: 900px) 720px, 1080px" alt="Програма ст. 11"
+                                loading="lazy">
+                        </div>
                     </div>
                 </div>
 
