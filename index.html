@@ -588,8 +588,10 @@
             <div class="teacher__content">
                 <div class="teacher__visual">
                     <div class="teacher__image-wrapper">
-                        <img src="assets/images/olena_grynevych.webp" alt="Олена Гринєвич" class="teacher__image"
-                            loading="lazy" width="450" height="550">
+                        <img src="assets/images/olena-720.webp"
+                            srcset="assets/images/olena-360.webp 360w, assets/images/olena-720.webp 720w, assets/images/olena-1080.webp 1080w"
+                            sizes="(max-width: 480px) 360px, (max-width: 900px) 720px, 1080px" alt="Олена Гринєвич"
+                            class="teacher__image" loading="lazy" width="450" height="550">
                     </div>
                     <p class="teacher__visual-role">засновниця та викладачка<br>GRINEVICH SCHOOL DESIGN</p>
                     <p class="teacher__visual-motto">Дизайнерами не народжуються,<br>дизайнерами стають!!!</p>
@@ -1131,8 +1133,8 @@
                 document.getElementById('timer-seconds').textContent = String(seconds).padStart(2, '0');
             }
 
-            const timerInterval = setInterval(updateTimer, 1000);
-            updateTimer(); // Initial call
+            // const timerInterval = setInterval(updateTimer, 1000);
+            // updateTimer(); // Initial call
 
             // Accordion Logic (Benefits Section)
             const accordionHeaders = document.querySelectorAll('.accordion__header');
@@ -1170,17 +1172,25 @@
 
                     // Sticky Btn Logic
                     if (stickyBtn) {
+                        const heroSection = document.querySelector('.hero');
                         let isPricingVisible = false;
+                        let isHeroVisible = true;
+
                         if (pricingSection) {
                             const rect = pricingSection.getBoundingClientRect();
-                            // Перевіряємо, чи секція видима або ми її пройшли
-                            // Якщо верх секції вище низу екрану і низ секції нижче верху екрану
-                            if (rect.top < windowHeight && rect.bottom > 0) {
+                            if (rect.top < windowHeight - 100) { // Зникає трохи заздалегідь
                                 isPricingVisible = true;
                             }
                         }
 
-                        if (scrollY > 1200 && !isPricingVisible) {
+                        if (heroSection) {
+                            const rect = heroSection.getBoundingClientRect();
+                            if (rect.bottom < 0) { // З'являється, коли Hero повністю пройдено
+                                isHeroVisible = false;
+                            }
+                        }
+
+                        if (!isHeroVisible && !isPricingVisible) {
                             stickyBtn.classList.add('visible');
                         } else {
                             stickyBtn.classList.remove('visible');
